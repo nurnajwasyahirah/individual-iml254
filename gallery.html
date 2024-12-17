@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>gallery</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        #gallery {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Gallery container styling */
+        .gallery-container {
+            width: 30%;
+            text-align: center;
+        }
+
+        /* Container for the images and navigation buttons */
+        .w3-content {
+            position: relative;
+        }
+
+        /* Style for the images */
+        .mySlides {
+            width: 80%;
+            display: none;
+            margin: 0 auto;
+        }
+
+        /* Styling for navigation buttons */
+        .w3-button {
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .w3-button:hover {
+            background-color: #007BFF;
+        }
+
+        .w3-display-left {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+
+        .w3-display-right {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+        }
+
+        h3 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+   header {
+            background-color: hotpink;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: hotpink;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<header>
+<h1>Wawa's Personal Website</h1>
+<p>Your one-stop place to know all about me!</p>
+</header>
+
+<body background="image/bg.jpg">
+
+<marquee>Welcome to My Gallery :)</marquee>
+
+<br>
+<center>
+<table border="0" cellspacing="5" cellpadding="5">
+  <tr>
+    <td align="center"><a href="myself.html"><img src="image/myself.png" width="100%" height="100%"></a></td>
+    <td align="center"><a href="family.html"><img src="image/family.png" width="100%" height="100%"></a></td>
+    <td align="center"><a href="friends.html"><img src="image/friends.png" width="100%" height="100%"></a></td>
+    <td align="center"><a href="education.html"><img src="image/education.png" width="100%" height="100%"></a></td>
+    <td align="center"><a href="songs.html"><img src="image/songs.png" width="100%" height="100%"></a></td>
+    <td align="center"><a href="foodie.html"><img src="image/foodie.png" width="100%" height="100%"></a></td>
+    <td align="center"><a href="gallery.html"><img src="image/gallery.png" width="100%" height="100%"></a></td>
+  </tr>
+</table>
+</center>
+<br>
+
+<h1 align="center">Gallery</h1>
+<br> 
+
+<div id="gallery">
+    <!-- Sunset Gallery -->
+    <div class="gallery-container">
+        <h3>Sunset Gallery</h3>
+        <div class="w3-content">
+            <img class="mySlides" src="image/sunset1.jpg" alt="Sunset 1">
+            <img class="mySlides" src="image/sunset2.jpg" alt="Sunset 2">
+            <img class="mySlides" src="image/sunset3.jpg" alt="Sunset 3">
+            <img class="mySlides" src="image/sunset4.jpg" alt="Sunset 4">
+            <img class="mySlides" src="image/sunset5.jpg" alt="Sunset 5">
+            <img class="mySlides" src="image/sunset6.jpg" alt="Sunset 6">
+
+            <button class="w3-button w3-display-left" onclick="plusDivs(-1, 'sunset')">&#10094;</button>
+            <button class="w3-button w3-display-right" onclick="plusDivs(1, 'sunset')">&#10095;</button>
+        </div>
+    </div>
+
+    <!-- Cat Gallery -->
+    <div class="gallery-container">
+        <h3>Cat Gallery</h3>
+        <div class="w3-content">
+            <img class="mySlides" src="image/cat1.jpg" alt="Cat 1">
+            <img class="mySlides" src="image/cat2.jpg" alt="Cat 2">
+            <img class="mySlides" src="image/cat3.jpg" alt="Cat 3">
+            <img class="mySlides" src="image/cat4.jpg" alt="Cat 4">
+            <img class="mySlides" src="image/cat5.jpg" alt="Cat 5">
+            <img class="mySlides" src="image/cat6.jpg" alt="Cat 6">
+
+            <button class="w3-button w3-display-left" onclick="plusDivs(-1, 'cat')">&#10094;</button>
+            <button class="w3-button w3-display-right" onclick="plusDivs(1, 'cat')">&#10095;</button>
+        </div>
+    </div>
+
+    <!-- Flower Gallery -->
+    <div class="gallery-container">
+        <h3>Flower Gallery</h3>
+        <div class="w3-content">
+            <img class="mySlides" src="image/flower1.jpg" alt="Flower 1">
+            <img class="mySlides" src="image/flower2.jpg" alt="Flower 2">
+            <img class="mySlides" src="image/flower3.jpg" alt="Flower 3">
+            <img class="mySlides" src="image/flower4.jpg" alt="Flower 4">
+            <img class="mySlides" src="image/flower5.jpg" alt="Flower 5">
+            <img class="mySlides" src="image/flower6.jpg" alt="Flower 6">
+
+            <button class="w3-button w3-display-left" onclick="plusDivs(-1, 'flower')">&#10094;</button>
+            <button class="w3-button w3-display-right" onclick="plusDivs(1, 'flower')">&#10095;</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    let slideIndex = {
+        sunset: 1,
+        cat: 1,
+        flower: 1
+    };
+
+    showDivs(slideIndex.sunset, 'sunset');
+    showDivs(slideIndex.cat, 'cat');
+    showDivs(slideIndex.flower, 'flower');
+
+    function plusDivs(n, category) {
+        slideIndex[category] += n;
+        showDivs(slideIndex[category], category);
+    }
+
+    function showDivs(n, category) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        var categorySlides = [];
+
+        for (i = 0; i < x.length; i++) {
+            if (x[i].alt.toLowerCase().includes(category)) {
+                categorySlides.push(x[i]);
+            }
+        }
+
+        if (n > categorySlides.length) {slideIndex[category] = 1}
+        if (n < 1) {slideIndex[category] = categorySlides.length}
+
+        categorySlides.forEach(function(slide) {
+            slide.style.display = "none";
+        });
+
+        categorySlides[slideIndex[category] - 1].style.display = "block";
+    }
+</script>
+
+<br>
+<br>
+<br>
+
+<center><a href="index.html"><img src="image/home.png" width="10%" height="10%"></a></center>
+<br>
+<center><a href="#top"><img src="image/top.png" width="8%" height="8%"></a></center>
+<br>
+<br>
+
+<footer>
+<p>&#169; 2024 NUR NAJWA SYAHIRAH<br>
+All Rights Reserved.<br>
+</footer>
+
+</body>
+</html>

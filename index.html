@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>homepage</title>
+
+<style>
+    header {
+            background-color: hotpink;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: hotpink;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<header>
+<marquee font="rockwell">Welcome to My Personal Website :)</marquee>
+        <h1>Wawa's Personal Website</h1>
+        <p>Your one-stop place to know all about me!</p>
+    </header>
+
+<body background="image/bg.jpg">
+
+<h1 align="center">MY PERSONAL WEBSITE</h1>
+<br>
+<h2 align="center">HOMEPAGE</h2>
+
+<br>
+<center>
+<table border="0" cellspacing="5" cellpadding="5">
+  <tr>
+    <td align="center"><a href="myself.html"><img src="image/myself.png" width="100%" height="100%"></a></td>
+    <td align="center"><a href="family.html"><img src="image/family.png" width="100%" height="100%"></a></td>
+    <td align="center"><a href="friends.html"><img src="image/friends.png" width="100%" height="100%"></a></td>
+    <td align="center"><a href="education.html"><img src="image/education.png" width="100%" height="100%"></a></td>
+    <td align="center"><a href="songs.html"><img src="image/songs.png" width="100%" height="100%"></a></td>
+    <td align="center"><a href="foodie.html"><img src="image/foodie.png" width="100%" height="100%"></a></td>
+    <td align="center"><a href="gallery.html"><img src="image/gallery.png" width="100%" height="100%"></a></td>
+  </tr>
+</table>
+</center>
+<br>
+
+<center>
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="image/me2.jpg" width= "30%" height="30%">
+  <img class="mySlides" src="image/flower5.jpg" width= "30%" height="30%">
+  <img class="mySlides" src="image/sunset1.jpg" width= "30%" height="30%">
+  
+<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+</center>
+
+<br>
+<br>
+<br>
+<center><a href="#top"><img src="image/top.png" width="8%" height="8%"></a></center>
+<br>
+<br>
+
+<footer>
+<p>&#169; 2024 NUR NAJWA SYAHIRAH<br>
+All Rights Reserved.<br>
+</footer>
+
+</body>
+</html>
